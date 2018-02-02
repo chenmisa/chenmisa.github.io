@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>荳dou.甜點屋</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/hover.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 微軟正黑體;
+            letter-spacing: 5px;
+        }
+
+        #left-section {
+            position: fixed;
+            width: 20.83%;
+            height: 100vh;
+            background-image: url("img/nav01.jpg");
+            padding-top: 70px;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        #right-section {
+            padding-left: 20.83%;
+            width: 100%;
+        }
+
+        #nav {
+            position: relative;
+            padding: 0 100px;
+        }
+
+        .navul {
+            font-size: 35px;
+            list-style: none;
+            font-weight: bolder;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navul li {
+            padding: 40px 0;
+        }
+
+        .navul li a {
+            color: white;
+        }
+
+        .title {
+            padding: 20px;
+            color: rgb(84, 142, 168);
+            font-size: 50px;
+            font-weight: bolder;
+            letter-spacing: 5px;
+        }
+
+        .pro-all {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bolder;
+            color: rgb(84, 142, 168);
+            letter-spacing: 5px;
+            margin: 20px;
+        }
+
+        .probg {
+            background-color: rgba(130, 180, 200, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .about {
+            background-color: rgba(130, 180, 200, 0.7);
+        }
+
+        .proIntitle {
+            padding: 20px;
+            color: rgb(84, 142, 168);
+            font-size: 45px;
+            font-weight: bolder;
+            letter-spacing: 5px;
+        }
+
+        #news_section {
+            padding: 20px 40px;
+        }
+
+        .icon .col-6:last-child {
+            border-left: 3px solid white;
+
+        }
+
+        .icon img {
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .proIn {
+            padding: 0 40px;
+        }
+
+        .proC {
+            margin-bottom: 40px;
+        }
+
+        .abouttitle {
+
+            color: white;
+            font-size: 60px;
+            font-weight: bolder;
+            letter-spacing: 5px;
+            padding: 70px;
+            margin-left: 20px;
+        }
+
+        .story {
+
+            color: white;
+            font-size: 45px;
+            letter-spacing: 15px;
+            padding-bottom: 40px;
+            margin-left: 200px;
+            line-height: 90px;
+        }
+
+        .footer {
+            margin-left: 10%;
+            margin-right: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bolder;
+            color: rgb(84, 142, 168);
+            letter-spacing: 5px;
+
+        }
+
+        .f-title {
+            border-right: 3px solid rgb(84, 142, 168);
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .cover {
+            transition: .8s;
+            opacity: 0;
+            color: rgb(19, 47, 122);
+        }
+
+        .f-title:hover {
+            color: rgb(228, 35, 125);
+            opacity: 1;
+        }
+
+        .copyright {
+            width: 100%;
+            font-size: 25px;
+            color: white;
+            letter-spacing: 10px;
+            background-color: rgb(84, 142, 168);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .top {
+            width: 80px;
+            height: 80px;
+            right: 50px;
+            bottom: 110px;
+            position: fixed;
+            z-index: 20;
+        }
+
+        .name {
+            font-size: 40px;
+            font-weight: bolder;
+            color: rgb(84, 142, 168);
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bolder;
+            color: rgb(228, 35, 125);
+            margin-bottom: 40px;
+        }
+
+        .description {
+            font-size: 30px;
+
+            color: rgb(84, 142, 168);
+        }
+
+        .N-name {
+            font-size: 50px;
+            font-weight: bolder;
+            color: rgb(84, 142, 168);
+            margin-bottom: 20px;
+        }
+
+        .N-price {
+            font-size: 30px;
+            font-weight: bolder;
+            color: rgb(228, 35, 125);
+            margin-bottom: 60px;
+        }
+
+        .N-description {
+            font-size: 35px;
+            color: rgb(84, 142, 168);
+            line-height: 70px;
+        }
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        #left-section #nav a:hover,
+        #left-section #nav a:focus,
+        #left-section #nav a:active {
+            text-decoration: none;
+            color: rgb(221, 103, 158);
+        }
+
+        .f-title #nav a:hover,
+        .f-title #nav a:focus,
+        .f-title #nav a:active {
+            text-decoration: none;
+            color: rgb(221, 103, 158);
+        }
+
+        /* ***********上方是把連結的底線拿掉************** */
+
+        .cardall {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .cardleft {
+            position: relative;
+            width: 250px;
+            margin-right: 180px;
+        }
+
+        .cardleft::after {
+            content: '';
+            width: 10px;
+            height: 200px;
+            background-color: #81B2C9;
+            position: absolute;
+            top: 50%;
+            margin-top: -100px;
+            right: -93px;
+        }
+
+        .cardright {
+            width: 70px;
+
+        }
+
+        .cardul {
+            padding-left: 0;
+            margin-bottom: 0;
+            display: inline-block;
+        }
+
+        .cardli {
+            font-size: 40px;
+            color: rgb(84, 142, 168);
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+
+        #logo {
+            display: block;
+        }
+
+        .mobile-logo {
+            display: none;
+        }
+
+        .navul {
+            display: block;
+        }
+
+        .icon {
+            display: flex;
+        }
+
+        @media screen and (max-width:1320px) {
+            #nav {
+                padding: 0;
+            }
+            #left-section {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding-top: 0;
+            }
+            .mobile-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+            }
+            #logo {
+                display: none;
+            }
+            .mobile-logo {
+                display: block;
+                height: 60px;
+            }
+            .mobile-icon {
+                display: flex;
+            }
+            .mobile-icon>img {
+                height: 40px;
+            }
+            .navul {
+                display: none;
+                position: absolute;
+                width: 100%;
+                font-size: 20px;
+                z-index: 999;
+                top: -1px;
+                background-image: url(img/nav01.jpg);
+            }
+            .navul li {
+                padding: 10px 0;
+            }
+            .icon {
+                display: none;
+            }
+            #right-section {
+                padding-left: 0;
+            }
+            .mobile-toggle {
+                color: white;
+            }
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                width: 20px;
+                height: 20px;
+            }
+            .top {
+                width: 50px;
+                height: 50px;
+                right: 30px;
+                bottom: 80px;
+                position: fixed;
+                z-index: 20;
+            }
+            .copyright {
+                width: 100%;
+                font-size: 20px;
+                color: white;
+                letter-spacing: 7px;
+                background-color: rgb(84, 142, 168);
+                text-align: center;
+                padding: 5px;
+            }
+            .footer {
+                margin-left: 10%;
+                margin-right: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                letter-spacing: 5px;
+
+            }
+
+            .f-title {
+                border-right: 2px solid rgb(84, 142, 168);
+                margin: 0 auto;
+                width: 100%;
+                /* 線的距離 */
+            }
+            
+
+            .cardul {
+
+                padding-left: 0;
+                margin-bottom: 0;
+                display: inline-block;
+            }
+
+            .cardli {
+                width: 100%;
+                font-size: 20px;
+                color: rgb(84, 142, 168);
+                list-style: none;
+                margin-bottom: 20px;
+            }
+
+            .cardleft::after {
+                content: '';
+                width: 5px;
+                height: 150px;
+                background-color: #81B2C9;
+                position: absolute;
+                top: 50%;
+                margin-top: -100px;
+                right: -35%;
+            }
+            .cardall {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px 0;
+            }
+
+            .cardright {
+                width: 30px;
+            }
+
+            .abouttitle {
+
+                color: white;
+                font-size: 35px;
+                font-weight: bolder;
+                letter-spacing: 5px;
+                padding: 11px 0;
+                margin-left: 31px;
+            }
+
+            .story {
+                color: white;
+                font-size: 25px;
+                letter-spacing: 15px;
+                padding-bottom: 14px;
+                margin-left: 33px;
+                line-height: 32px;
+            }
+            .pro-all {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                letter-spacing: 0px;
+                margin: 5px;
+            }
+
+            .N-name {
+                font-size: 25px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                margin-bottom: 20px;
+            }
+            .N-description {
+                font-size: 20px;
+                color: rgb(84, 142, 168);
+                line-height: 40px;
+            }
+
+            .title {
+                padding: 5px;
+                color: rgb(84, 142, 168);
+                font-size: 30px;
+                font-weight: bolder;
+                letter-spacing: 5px;
+            }
+
+            .N-price {
+                font-size: 15px;
+                font-weight: bolder;
+                color: rgb(228, 35, 125);
+                margin-bottom: 20px;
+            }
+
+            #news_section {
+                padding: 0px 5%;
+            }
+
+            .proIntitle {
+                padding: 9px;
+                color: rgb(84, 142, 168);
+                font-size: 28px;
+                font-weight: bolder;
+                letter-spacing: 5px;
+            }
+
+            .proIn {
+                padding: 0 20px;
+            }
+
+            .probg {
+                background-color: rgba(130, 180, 200, 0.1);
+                padding: 10px 20px;
+            }
+
+            .name {
+                font-size: 25px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .price {
+                font-size: 18px;
+                font-weight: bolder;
+                color: rgb(228, 35, 125);
+                margin-bottom: 10px;
+
+            }
+
+            .description {
+                font-size: 20px;
+                color: rgb(84, 142, 168);
+                margin-bottom: 20px;
+
+            }
+
+
+        }
+
+
+        @media screen and (max-width:766px) {
+            #nav {
+                padding: 0;
+            }
+            #left-section {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding-top: 0;
+            }
+            .mobile-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+            }
+            #logo {
+                display: none;
+            }
+            .mobile-logo {
+                display: block;
+                height: 60px;
+            }
+            .mobile-icon {
+                display: flex;
+            }
+            .mobile-icon>img {
+                height: 40px;
+            }
+            .navul {
+                display: none;
+                position: absolute;
+                width: 100%;
+                font-size: 20px;
+                z-index: 999;
+                top: -1px;
+                background-image: url(img/nav01.jpg);
+            }
+            .navul li {
+                padding: 10px 0;
+            }
+            .icon {
+                display: none;
+            }
+            #right-section {
+                padding-left: 0;
+            }
+            .mobile-toggle {
+                color: white;
+            }
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                width: 20px;
+                height: 20px;
+            }
+            .top {
+                width: 40px;
+                height: 40px;
+                right: 30px;
+                bottom: 30px;
+                position: fixed;
+                z-index: 20;
+            }
+            .copyright {
+                width: 100%;
+                font-size: 10px;
+                color: white;
+                letter-spacing: 7px;
+                background-color: rgb(84, 142, 168);
+                text-align: center;
+                padding: 5px;
+            }
+            .footer {
+                margin-left: 10%;
+                margin-right: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                letter-spacing: 5%;
+
+            }
+
+            .f-title {
+                border-right: 2px solid rgb(84, 142, 168);
+                margin: 0 auto;
+                width: 120%;
+            }
+
+            .cardul {
+
+                padding-left: 0;
+                margin-bottom: 0;
+                display: inline-block;
+            }
+
+            .cardli {
+                width: 100%;
+                font-size: 1px;
+                color: rgb(84, 142, 168);
+                list-style: none;
+                margin-bottom: 10px;
+            }
+
+            .cardleft::after {
+                content: '';
+                width: 5px;
+                height: 100px;
+                background-color: #81B2C9;
+                position: absolute;
+                top: 105%;
+                margin-top: -120px;
+                right: -20px;
+            }
+            .cardleft {
+                position: relative;
+                width: 120px;
+                margin-right: 60px;
+            }
+
+            .abouttitle {
+
+                color: white;
+                font-size: 35px;
+                font-weight: bolder;
+                letter-spacing: 5px;
+                padding: 11px 0;
+                margin-left: 31px;
+            }
+
+            .story {
+                color: white;
+                font-size: 20px;
+                letter-spacing: 15px;
+                padding-bottom: 14px;
+                margin-left: 33px;
+                line-height: 32px;
+            }
+            .pro-all {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                letter-spacing: 0px;
+                margin: 5px;
+            }
+
+            .N-name {
+                font-size: 25px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                margin-bottom: 20px;
+            }
+            .N-description {
+                font-size: 20px;
+                color: rgb(84, 142, 168);
+                line-height: 40px;
+            }
+
+            .title {
+                padding: 5px;
+                color: rgb(84, 142, 168);
+                font-size: 30px;
+                font-weight: bolder;
+                letter-spacing: 5px;
+            }
+
+            .N-price {
+                font-size: 15px;
+                font-weight: bolder;
+                color: rgb(228, 35, 125);
+                margin-bottom: 20px;
+            }
+
+            #news_section {
+                padding: 0px 5%;
+            }
+
+            .proIntitle {
+                padding: 9px;
+                color: rgb(84, 142, 168);
+                font-size: 28px;
+                font-weight: bolder;
+                letter-spacing: 5px;
+            }
+
+            .proIn {
+                padding: 0 20px;
+            }
+
+            .probg {
+                background-color: rgba(130, 180, 200, 0.1);
+                padding: 10px 20px;
+            }
+
+            .name {
+                font-size: 25px;
+                font-weight: bolder;
+                color: rgb(84, 142, 168);
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .price {
+                font-size: 18px;
+                font-weight: bolder;
+                color: rgb(228, 35, 125);
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .description {
+                font-size: 20px;
+                color: rgb(84, 142, 168);
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="left-section">
+        <div class="mobile-nav">
+            <div class="mobile-toggle">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <img class="mobile-logo" src="img/mobile-logo.png" alt="">
+            <div class="mobile-icon">
+                <img class="img-fluid" src="img/icon-01.png" alt="">
+                <img class="img-fluid" src="img/icon-02.png" alt="">
+            </div>
+        </div>
+        <!-- 這裡放漢堡條 -->
+        <div id="nav">
+            <a href="#right-section">
+                <img id="logo" class="logo img-fluid" src="img/LOGO.png" alt="">
+            </a>
+            <ul class="navul">
+                <li>
+                    <a href="#news_section" class="hvr-forward">最新消息</a>
+                </li>
+                <li>
+                    <a href="#anchor2" class="hvr-forward">產品專區</a>
+                </li>
+                <li>
+                    <a href="#anchor3" class="hvr-forward">關於我們</a>
+                </li>
+                <li>
+                    <a href="#anchor4" class="hvr-forward">連絡我們</a>
+                </li>
+            </ul>
+            <div class="row icon">
+                <div class="col-6">
+                    <a href="https://zh-tw.facebook.com/%E8%8D%B3Dou%E7%94%9C%E9%BB%9E%E5%B1%8B-247590052413006/" target="_blank">
+                        <img class="img-fluid" src="img/icon-01.png" alt="">
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="https://zh-tw.facebook.com/%E8%8D%B3Dou%E7%94%9C%E9%BB%9E%E5%B1%8B-247590052413006/" target="_blank">
+                        <img class="img-fluid" src="img/icon-02.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- ****************************左邊NAV結尾************************************ -->
+
+        </div>
+    </div>
+    </div>
+    <div class="top">
+        <a href="#right-section">
+            <img class="img-fluid" src="img/top.png" alt="">
+        </a>
+    </div>
+
+    <!-- **************************top結尾******************************** -->
+    <div id="right-section">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/banner-01.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner-02.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner-03.jpg" alt="Third slide">
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!-- **********slider結尾************* -->
+        </div>
+        <div class="news banner">
+            <img class="img-fluid" src="img/newsbanner-01.jpg" alt="">
+        </div>
+        <!-- **************banner結尾************ -->
+        <div id="news_section" class="news">
+            <div class="title">
+                <span>最新消息</span>
+            </div>
+            <div class="newsC">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="img/C.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="N-name">聖誕義賣活動</h3>
+                        <h4 class="N-price">2017/11/29</h4>
+                        <div class="N-description">
+                            【義賣手工餅乾】
+                            <br> 一份65元，你買一份就捐十元。
+                            <br> 捐給流浪動物協會讓更多毛孩子能飽餐一頓，希望大家多多支持這次的義賣活動。 來過店內的荳友們大概都知道， 我們有三隻毛孩， 我們的夢想是可以讓更多毛孩有個溫暖的家， 快來跟我們一起做愛心吧！
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="newsM">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <h3 class="N-name">中秋禮盒開跑囉</h3>
+                        <h4 class="N-price">2017/09/20</h4>
+                        <div class="N-description">
+                            【中秋禮盒訂購】
+                            <br> 中秋月圓人團圓，
+                            <br> 就讓我們荳在一起吧！
+                            <br> 客製化服務.訂製自己理想的搭配 中秋禮盒與現場優惠不同步哦！現場也有零售，想先嚐鮮的朋友歡迎來店（若有需要宅配荳媽可協助宅配，費用自理喔）中秋將近放假了，也多回家看看陪陪家人荳媽提前祝大家中秋快樂！
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <img class="img-fluid" src="img/M.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <div class="newsF">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <img class="img-fluid" src="img/F.jpg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="N-name">父親節蛋糕預購</h3>
+                        <h4 class="N-price">2017/08/03</h4>
+                        <div class="N-description">
+                            【父親節蛋糕預購中】
+                            <br> 一年一度的父親節又來囉！孝順的的荳友兒女們，想好父親節要給爸爸什麼驚喜了嗎？別忘了送驚喜的同時，記得準備一顆充滿孝心的父親節蛋糕哦！犒賞辛苦賺錢的爸爸唷！
+                            <br>
+                            <br> 新鮮水果蛋糕-6吋500元
+                            <br> 新鮮水果蛋糕-8吋700元
+                            <br> ※來店打卡享9折優惠哦
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <!-- *************最新消息結尾************ -->
+        <div id="anchor2" class="pro">
+            <div class="probg">
+                <div class="title">
+                    <span>產品專區</span>
+                </div>
+                <div class="row proB">
+                    <div class="col">
+                        <div class="pyte">
+                            <img class="img-fluid" src="img/cake.jpg" alt="">
+                            <div class="pro-all">
+                                <a href="#anchorcake">精緻蛋糕</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="img/cookie.jpg" alt="">
+                        <div class="pro-all">
+                            <a href="#anchorcookies">手作點心</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="img/C-cake.jpg" alt="">
+                        <div class="pro-all">
+                            <a href="#anchorCcake">中式糕餅</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *********************產品專區三個項目結尾**************** -->
+        <div id="anchorcake" class="proIn">
+            <div class="proIntitle">
+                <span>精緻蛋糕</span>
+            </div>
+            <div class="row proC">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-01.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">古典巧克力</h3>
+                            <h4 class="price">$259</h4>
+                            <div class="description">
+                                經典巧克力蛋糕，
+                                <br> 香醇濃郁，入口即化。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-02.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">芋見荳荳</h3>
+                            <h4 class="price">$700</h4>
+                            <div class="description">
+                                餡料鬆軟綿密，不
+                                <br> 含防人工添加，經
+                                <br> 典芋泥蛋糕卷。
+                                <br> 六吋 $500
+                                <br> 八吋 $700
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-03.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">帕瑪森起司</h3>
+                            <h4 class="price">$35</h4>
+                            <div class="description">
+                                帕瑪森起司蛋糕，
+                                <br> 有濃濃起司味的超
+                                <br> 美味。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-04.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">海苔肉鬆夾心</h3>
+                            <h4 class="price">$35</h4>
+                            <div class="description">
+                                口感紮實、真材實
+                                <br> 料；多層次口感。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-05.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">蔓越莓天使</h3>
+                            <h4 class="price">$40</h4>
+                            <div class="description">
+                                在綿密的棉花蛋糕
+                                <br> 裡加入一些碎蔓越
+                                <br> 莓，吃起來酸甜可
+                                <br> 口。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-06.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">綜合野莓捲</h3>
+                            <h4 class="price">$240</h4>
+                            <div class="description">
+                                綜合野莓口感有多
+                                <br> 種莓果的層次，底
+                                <br> 下的蛋糕搭配野莓
+                                <br> 超吸引人，是很多
+                                <br> 女生喜歡的口味。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-07.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">青蔥肉鬆卷</h3>
+                            <h4 class="price">$30</h4>
+                            <div class="description">
+                                吃膩甜滋滋的蛋糕
+                                <br> 了嗎？換點清爽的
+                                <br> 鹹香蛋糕卷！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- **************************產品專區-精緻蛋糕結尾*********************** -->
+            <div id="anchorcookies" class="proIntitle">
+                <span>手作點心</span>
+            </div>
+            <div class="row proC">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-08.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">各式手工餅乾</h3>
+                            <h4 class="price">$60</h4>
+                            <div class="description">
+                                經典口味和季節限
+                                <br> 定口味，每一口咬
+                                <br> 下都吃得到餅乾的
+                                <br> 香脆和真材實料，
+                                <br> 不定期新增新口味
+                                <br> 。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-09.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">荳荳檸檬塔</h3>
+                            <h4 class="price">$65</h4>
+                            <div class="description">
+                                檸檬皮的香氣，配
+                                <br> 上下面酥脆的塔皮
+                                <br> 中間帶點冰凍後的
+                                <br> 堅硬。酸酸的口味
+                                <br> 加上冰凍的口感。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-10.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">莓果乳酪塔</h3>
+                            <h4 class="price">$80</h4>
+                            <div class="description">
+                                手作烤莓果乳酪塔
+                                <br> ，莓果清爽的口感
+                                <br> 在乳酪香氣中甜蜜
+                                <br> 結合。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-11.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">覆盆子巧克力塔</h3>
+                            <h4 class="price">$80</h4>
+                            <div class="description">
+                                巧克力較濃郁、醇
+                                <br> 厚，有時會覺得過
+                                <br> 於甜膩，將覆盆子
+                                <br> 和巧克力搭在一起
+                                <br> ，完美的組合。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-12.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">藍莓起司塔</h3>
+                            <h4 class="price">$70</h4>
+                            <div class="description">
+                                藍莓微微酸澀口感
+                                <br> ，再搭上簡單又香
+                                <br> 純的起司不管吃多
+                                <br> 少都不覺得膩口。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-13.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">濃郁巧克力塔</h3>
+                            <h4 class="price">$80</h4>
+                            <div class="description">
+                                特調出濃郁可可內
+                                <br> 餡完美比例搭配苦
+                                <br> 甜巧克力塔皮完全
+                                <br> 征服巧克力控的完
+                                <br> 美甜點。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-14.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">宇治抹茶塔</h3>
+                            <h4 class="price">$70</h4>
+                            <div class="description">
+                                濃郁清香的抹茶，
+                                <br> 香脆的塔皮，豐富
+                                <br> 的層次口感是經典
+                                <br> 。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-15.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">土雞蛋布丁</h3>
+                            <h4 class="price">$35</h4>
+                            <div class="description">
+                                土雞蛋、光泉牛奶
+                                <br> 、台糖細砂糖、蜂
+                                <br> 蜜焦糖、絕對不加
+                                <br> 一點水。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-16.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">草莓燒</h3>
+                            <h4 class="price">【每日限量】$60</h4>
+                            <div class="description">
+                                新鮮的草莓加上美
+                                <br> 味銅鑼燒，超級療
+                                <br> 癒人心。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="anchorCcake" class="proIntitle">
+                <span>中式糕餅</span>
+            </div>
+            <div class="row proC">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-17.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <h3 class="name">紅豆蛋黃酥</h3>
+                            <h4 class="price">【中秋限定】$45</h4>
+                            <div class="description">
+                                外皮多重層次，內
+                                <br> 餡是自製紅豆餡，
+                                <br> 皮酥蛋香合而為一
+                                <br> ，延伸味蕾的新觸
+                                <br> 覺。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-18.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">鳳梨蛋黃酥</h3>
+                            <h4 class="price">【中秋限定】$45</h4>
+                            <div class="description">
+                                皮酥、餡軟、入口
+                                <br> 即化，內餡鹹香的
+                                <br> 蛋黃，搭配鳳梨餡
+                                <br> ，嚐起來鹹甜順口
+                                <br> 。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pyte">
+                                <img class="img-fluid" src="img/pro-19.jpg" alt="">
+                                <div class="pro-all">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="name">古早味鳳梨酥</h3>
+                            <h4 class="price">$30</h4>
+                            <div class="description">
+                                精選上等原料，回
+                                <br> 歸道地古法烘焙古
+                                <br> 早味鳳梨酥，聞名
+                                <br> 遠近的專精技藝及
+                                <br> 美味口感。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- *****************產品專區結尾****************** -->
+
+
+        <div id="anchor3" class="about">
+            <div class="abouttitle">
+
+                <span>關於我們</span>
+            </div>
+            <div class="story">
+                <span> 荳Do.甜點屋-
+                    <br> 簡單、樸實的外型和滿滿的愛心，
+                    <br> 是一位用心執著烘培的師傅，淳樸的小小甜點室，
+                    <br> 品嚐著每天出爐的蛋糕.甜點是最幸福的事。
+                </span>
+            </div>
+
+        </div>
+
+
+        <!-- **********************關於我們結尾********************** -->
+
+        <div class="cardall">
+            <div class="cardleft">
+                <a href="#news_section" class="hvr-forward">
+                    <img id="anchor4" class="img-fluid" src="img/card-08.png" alt="">
+                </a>
+            </div>
+            <ul class="cardul">
+                <li class="cardli">
+                    <img class="cardright" src="img/card-09.png" alt="">     營業時間：9:00am-10:00pm</li>
+                <li class="cardli">
+                    <img class="cardright" src="img/card-10.png" alt="">     0922 937 323</li>
+                <li class="cardli">
+                    <img class="cardright" src="img/card-11.png" alt="">     台中市大雅區永和路130-12號</li>
+            </ul>
+        </div>
+
+
+        <!-- *********************名片結尾********************* -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.624541809623!2d120.64036291457231!3d24.21992588436004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469168ca997e691%3A0xcdd06178c3f374d2!2z6I2zRG9155Sc6bue5bGL!5e0!3m2!1szh-TW!2stw!4v1517296511464"
+            width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <br>
+        <br>
+        <hr>
+
+
+        <div class="row footer">
+            <div class="col">
+                <div class="f-title">
+                    <a href="#news_section">最新消息</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="f-title">
+                    <a href="#anchor2">產品專區</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="f-title">
+                    <a href="#anchor3">關於我們</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="f-title">
+                    <a href="#anchor4">連絡我們</a>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <div class="copyright">yyyy/mm/dd-荳Dou.甜點屋by Misa</div>
+
+    </div>
+
+
+
+
+
+    <!-- ********************以下是js********************* -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+    <script>
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+    </script>
+    <script>
+        $(".mobile-toggle").click(function () {
+            $(".navul").slideToggle(1000);
+        });
+    </script>
+</body>
+
+</html>
